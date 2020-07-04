@@ -824,24 +824,7 @@
     .category-filters h1 {
       font-size: 26px;
     }
-    .coupons-info__banner1 {
-      padding-left: 0;
-      position: inherit;
-      width: 100%;
-      left: inherit;
-      right: inherit;
-      top: inherit;
-      bottom: inherit;
-      height: inherit;
-    }
-    .coupons-info__banner2 {
-      position: inherit;
-      left: inherit;
-      top: inherit;
-      margin-top: 20px;
-      height: 150px;
-      width: 100%;
-    }
+
     nav .coupons .cart {
       right: 70px;
     }
@@ -863,7 +846,24 @@
     .big-coupons{
       flex: 0 0 100%;
     }
-
+    .coupons-info__banner1 {
+      padding-left: 0;
+      position: inherit;
+      width: 100%;
+      left: inherit;
+      right: inherit;
+      top: inherit;
+      bottom: inherit;
+      height: inherit;
+    }
+    .coupons-info__banner2 {
+      position: inherit;
+      left: inherit;
+      top: inherit;
+      margin-top: 20px;
+      height: 150px;
+      width: 100%;
+    }
   }
 
   @media screen and (max-width: 767px) {
