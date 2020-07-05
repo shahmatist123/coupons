@@ -377,6 +377,11 @@
           font-weight: 700;
           margin-bottom: 0;
           color: #3b3e44;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         &2 {
@@ -385,6 +390,11 @@
           margin-top: 10px;
           margin-bottom: 0;
           color: #999999;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
 
@@ -451,10 +461,20 @@
       .small-coupons__text1 {
         font-size: 18px;
         max-width: 512px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .small-coupons__text2 {
         font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .small-coupons__price2 {
@@ -744,6 +764,10 @@
   }
 
   @media screen and (max-width: 1400px) {
+
+    .big-coupons .small-coupons__item .small-coupons__img{
+      height: 224px;
+    }
     .millet h1 {
       font-size: 24px;
     }
@@ -867,6 +891,9 @@
   }
 
   @media screen and (max-width: 767px) {
+    .big-coupons .small-coupons__item .small-coupons__text2{
+      -webkit-line-clamp:2;
+    }
     .container, .container-sm, .container-md, .container-lg, .container-xl {
       width: 100%;
       padding: 0;
@@ -961,9 +988,6 @@
           font-size: 16px;
         }
 
-        .small-coupons__text1 {
-          font-size: 14px;
-        }
 
         .small-coupons__price {
           margin-top: 0;
@@ -1112,6 +1136,7 @@
   }
 
   @media screen and(min-width: 768px) {
+
     .d-md-block {
       display: block !important;
     }
