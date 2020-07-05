@@ -345,10 +345,11 @@
 
         .small-coupons__item-padding {
           padding: 15px 20px 20px 20px;
-
+          height: 241px;
+          position: relative;
           .discount {
             position: absolute;
-            top: 0;
+            top: -204px;
             left: 0;
             background: #00b153;
             color: #fff;
@@ -422,6 +423,10 @@
 
       .small-coupons__price {
         margin-top: 16px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
 
         &1 {
           font-size: 16px;
@@ -448,12 +453,18 @@
       }
     }
   }
-
+  .big-coupons{
+    .small-coupons__item-padding{
+      height: 153px !important;
+    }
+  }
   .big-coupons {
     flex: 0 0 50%;
     padding: 0 10px;
     width: 100%;
-
+    .discount{
+      top: -292px !important;
+    }
     .small-coupons__item {
       flex: 0 0 100%;
       padding: 0;
@@ -764,7 +775,9 @@
   }
 
   @media screen and (max-width: 1400px) {
-
+    .big-coupons .discount{
+      top: -228px !important;
+    }
     .big-coupons .small-coupons__item .small-coupons__img{
       height: 224px;
     }
@@ -891,6 +904,9 @@
   }
 
   @media screen and (max-width: 767px) {
+    .big-coupons .small-coupons__item-padding{
+      height: 178px !important;
+    }
     .big-coupons .small-coupons__item .small-coupons__text2{
       -webkit-line-clamp:2;
     }
@@ -991,8 +1007,6 @@
 
         .small-coupons__price {
           margin-top: 0;
-          padding-top: 30px;
-          position: relative;
         }
 
         .small-coupons__price1 {
@@ -1008,7 +1022,7 @@
 
         .small-coupons__price3 {
           position: absolute;
-          top: 0;
+          top: -20px;
           left: 50%;
           transform: translateX(-50%);
         }
