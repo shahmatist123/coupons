@@ -1,22 +1,174 @@
+@import "fonts";
 
 .body-padding {
   padding: 0;
-
   margin: 0;
 }
-body .box-size .big-coupons .h-auto{
-   height: auto !important;
- }
+
+body .box-size .big-coupons .h-auto {
+  height: auto !important;
+}
+
 .box-size {
   background: #eceef2;
   padding: 0 0 166px 0;
-  .coupons-info .big-coupons{
-    flex:  0 0 65%;
+
+  .important-menu::-webkit-scrollbar {
+    width: 0;
   }
+
+  .important-menu {
+    -ms-overflow-style: none;
+  }
+
+  .important-bg {
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: ease .3s;
+    width: 100%;
+    height: calc(100vh + 50px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1500;
+    pointer-events: none;
+  }
+
+  .important-menu {
+    transition: ease .3s;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    position: fixed;
+    left: -280px;
+    top: 0;
+    z-index: 2000;
+    pointer-events: none;
+    padding-bottom: 50px;
+  }
+
+  .important-menu a {
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: ease 0.2s;
+  }
+
+  .important-menu p {
+    border-bottom: 2px solid transparent;
+  }
+
+  .important-menu__easy-item a:hover,
+  .important-menu p:hover {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid #d90000;
+    transition: ease 0.1s;
+  }
+
+  .important-menu {
+    background: #003366;
+    width: 280px;
+    height: 100vh;
+  }
+
+  .important-menu-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    position: -webkit-sticky;
+    position: sticky;
+    background: #003366;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+
+  .important-menu-header .important-menu-header__logo {
+    margin-left: 30px;
+    margin-top: 16px;
+  }
+
+  .important-menu-header .important-menu-header__exit {
+    padding: 17px 18px 16px 18px;
+    background: #d90000;
+  }
+
+  .important-menu .important-menu__easy-item {
+    font-weight: bold;
+    padding: 15px 15px 15px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+  }
+
+  .important-menu .important-menu__easy-item:hover {
+    background: rgba(256, 256, 256, 0.15);
+  }
+
+  .important-menu__drop-item p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .important-menu__drop-down {
+    display: none;
+  }
+
+  .important-menu__drop-down a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .important-menu__drop-down a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .important-menu__drop-down .important-menu__drop-down__margin {
+    margin: 18px 20px 18px 30px;
+  }
+
+  .important-menu__drop-down .important-menu__drop-down__margin:first-of-type {
+    margin-top: 0;
+  }
+
+  .important-menu__drop-item .important-menu__drop-item__d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 15px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    transition: ease 0.1s;
+  }
+
+  .important-menu__drop-item .important-menu__drop-item__d-flex:hover {
+    background: rgba(256, 256, 256, 0.15);
+  }
+
+  .important-menu__drop-item .important-menu__drop-item__d-flex:last-of-type {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .rubznak {
+    font-family: "rouble", sans-serif;
+  }
+
+  .coupons-info .big-coupons {
+    flex: 0 0 65%;
+  }
+
   .category-rout .category-rout__item img {
     margin-top: 4px;
   }
-  .mt-0{
+
+  .mt-0 {
     margin-top: 0 !important;
   }
 
@@ -77,7 +229,7 @@ body .box-size .big-coupons .h-auto{
     }
 
     .nav-menu {
-      padding: 16px 21px;
+      padding: 14px 16px;
       background: #d90000;
 
       p {
@@ -243,10 +395,12 @@ body .box-size .big-coupons .h-auto{
     .coupons {
       position: relative;
       width: 100%;
-      margin: 0px 47px 0 83px;
-      &>.d-md-flex{
+      margin: 0 47px 0 83px;
+
+      & > .d-md-flex {
         flex-wrap: wrap;
       }
+
       h1 {
         margin-top: 30px;
         color: #373a3c;
@@ -262,7 +416,10 @@ body .box-size .big-coupons .h-auto{
       .coupons__item {
         width: 260px;
         padding-bottom: 40px;
-
+        img {
+          width: 30px;
+          height: auto;
+        }
         p {
           font-size: 16px;
           color: #373a3c;
@@ -339,6 +496,10 @@ body .box-size .big-coupons .h-auto{
       height: 100%;
       margin-top: 20px;
 
+      & > a {
+        display: block;
+      }
+
       .small-coupons__img {
         object-fit: cover;
         width: 100%;
@@ -358,9 +519,10 @@ body .box-size .big-coupons .h-auto{
           position: relative;
 
         }
+
         .discount {
           position: absolute;
-          top:0;
+          top: 0;
           left: 0;
           background: #00b153;
           color: #fff;
@@ -458,20 +620,23 @@ body .box-size .big-coupons .h-auto{
           color: #00b153;
           font-size: 14px;
           text-decoration: none;
-
+          margin-bottom: 0;
         }
       }
     }
   }
-  .big-coupons{
-    .small-coupons__item-padding{
+
+  .big-coupons {
+    .small-coupons__item-padding {
       height: 153px !important;
     }
   }
+
   .big-coupons {
     flex: 0 0 50%;
     padding: 0 10px;
     width: 100%;
+
     .small-coupons__item {
       flex: 0 0 100%;
       padding: 0;
@@ -656,11 +821,13 @@ body .box-size .big-coupons .h-auto{
       font-size: 18px !important;
       margin-bottom: 28px !important;
     }
-    .coupons-info__link{
+
+    .coupons-info__link {
       display: block;
       width: auto;
       height: auto;
     }
+
     .coupons-info__imgs {
       margin: 30px -30px 36px -30px;
       padding: 30px 30px 0 30px;
@@ -787,12 +954,15 @@ body .box-size .big-coupons .h-auto{
   }
 
   @media screen and (max-width: 1400px) {
-    nav .coupons .view-all a{
+    .small-coupons .small-coupons__item .small-coupons__item-bg .small-coupons__item-padding {
+      height: 195px;
+    }
+    nav .coupons .view-all a {
       left: 50%;
       white-space: nowrap;
     }
-    .big-coupons .small-coupons__item .small-coupons__img{
-      height: 224px;
+    .big-coupons .small-coupons__item .small-coupons__img {
+      height: 242px;
     }
     .millet h1 {
       font-size: 24px;
@@ -881,13 +1051,19 @@ body .box-size .big-coupons .h-auto{
   }
 
   @media screen and (max-width: 1200px) {
-    .coupons-info .big-coupons{
-      flex:  0 0 100%;
+    .small-coupons .small-coupons__item .small-coupons__item-bg .small-coupons__item-padding {
+      height: 245px;
     }
-    .small-coupons__stock .small-coupons__stock1{
+    .big-coupons .small-coupons__item .small-coupons__img {
+      height: 224px;
+    }
+    .coupons-info .big-coupons {
+      flex: 0 0 100%;
+    }
+    .small-coupons__stock .small-coupons__stock1 {
       flex: 0 0 34%;
     }
-    .small-coupons__stock2 .small-coupons__stock4{
+    .small-coupons__stock2 .small-coupons__stock4 {
       padding-left: 10px;
     }
     .coupons-info {
@@ -901,7 +1077,7 @@ body .box-size .big-coupons .h-auto{
     .small-coupons .small-coupons__item {
       height: auto;
     }
-    .big-coupons{
+    .big-coupons {
       flex: 0 0 100%;
     }
     .coupons-info__banner1 {
@@ -925,11 +1101,11 @@ body .box-size .big-coupons .h-auto{
   }
 
   @media screen and (max-width: 767px) {
-    .big-coupons .small-coupons__item-padding{
+    .big-coupons .small-coupons__item-padding {
       height: 178px !important;
     }
-    .big-coupons .small-coupons__item .small-coupons__text2{
-      -webkit-line-clamp:2;
+    .big-coupons .small-coupons__item .small-coupons__text2 {
+      -webkit-line-clamp: 2;
     }
     .container, .container-sm, .container-md, .container-lg, .container-xl {
       width: 100%;
@@ -975,7 +1151,7 @@ body .box-size .big-coupons .h-auto{
 
         .nav-container__item {
           &:first-of-type {
-            width: 202px;
+            width: 197px;
             border-right: solid 1px #e0e0e0;
           }
 
@@ -991,6 +1167,7 @@ body .box-size .big-coupons .h-auto{
           width: 83px;
 
           .search-mobile__img {
+            height: 100%;
             img {
               border-right: solid 1px #e0e0e0;
               padding: 17px 16px 17px 17px;
@@ -1100,7 +1277,7 @@ body .box-size .big-coupons .h-auto{
       font-size: 14px;
       padding: 10px;
     }
-    .small-coupons__stock2 .small-coupons__stock4 .small-coupons__btn2{
+    .small-coupons__stock2 .small-coupons__stock4 .small-coupons__btn2 {
       font-size: 14px;
     }
     .coupons-info .small-coupons__item-padding {
