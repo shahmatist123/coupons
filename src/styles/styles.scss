@@ -416,10 +416,12 @@ body .box-size .big-coupons .h-auto {
       .coupons__item {
         width: 260px;
         padding-bottom: 40px;
+
         img {
           width: 30px;
           height: auto;
         }
+
         p {
           font-size: 16px;
           color: #373a3c;
@@ -953,13 +955,149 @@ body .box-size .big-coupons .h-auto {
     }
   }
 
+  .coupons-cart {
+    max-width: 970px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+
+    .coupons-cart__header {
+      padding: 20px 20px 0 20px;
+
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #373a3c;
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    .coupons-cart__img {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 110px;
+        height: 80px;
+        border-radius: 5px;
+        margin-right: 15px;
+        object-fit: cover;
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 16px;
+        color: #373a3c;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .coupons-cart__body {
+      padding: 0 20px 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .coupons-cart__counter {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+
+      .coupons-cart__counter1, .coupons-cart__counter2 {
+        font-size: 16px;
+        color: #373a3c;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 9px;
+        border-radius: 4px;
+        border: solid 1px #e0e0e0;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+      }
+    }
+
+    .coupons-cart__price {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: #373a3c;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .coupons-cart__info {
+      padding: 20px;
+      background: #f3f3f3;
+
+      h1 {
+        font-size: 24px;
+        margin: 30px 0;
+        color: #373a3c;
+      }
+
+      &-item {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+      }
+
+      &-item > p {
+        font-size: 16px;
+        color: #373a3c;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        max-width: 100px;
+        width: 100%;
+      }
+
+      .coupons-cart__info-flex {
+        align-items: center;
+
+        p {
+          margin-bottom: 0;
+          font-size: 16px;
+          margin-right: 5px;
+          width: 21px;
+        }
+      }
+
+      input {
+        padding: 8px 15px;
+        border-radius: 4px;
+        border: solid 1px #e0e0e0;
+        background: #fff;
+        font-size: 14px;
+        color: #999999;
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+  }
+
   @media screen and (max-width: 1400px) {
     .small-coupons .small-coupons__item .small-coupons__item-bg .small-coupons__item-padding {
       height: 195px;
     }
     nav .coupons .view-all a {
       left: 50%;
-      white-space: nowrap;
     }
     .big-coupons .small-coupons__item .small-coupons__img {
       height: 242px;
@@ -1101,6 +1239,39 @@ body .box-size .big-coupons .h-auto {
   }
 
   @media screen and (max-width: 767px) {
+    .coupons-cart {
+      .coupons-cart__body {
+        padding: 0 10px 0 0;
+      }
+
+      .coupons-cart__img {
+        position: relative;
+        img {
+          width: 80px;
+          height: 80px;
+        }
+        p{
+          position: absolute;
+          top: -25px;
+          width: 100vw;
+          padding: 0 15px;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .coupons-cart__body {
+        margin-top: 50px;
+      }
+      .coupons-cart__img {
+        p{
+
+        }
+      }
+    }
     .big-coupons .small-coupons__item-padding {
       height: 178px !important;
     }
@@ -1168,6 +1339,7 @@ body .box-size .big-coupons .h-auto {
 
           .search-mobile__img {
             height: 100%;
+
             img {
               border-right: solid 1px #e0e0e0;
               padding: 17px 16px 17px 17px;

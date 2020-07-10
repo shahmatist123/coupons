@@ -71,6 +71,18 @@ $(document).ready(function () {
     $('.important-menu').css('pointer-events', 'auto')
 
   });
+  $('.coupons-cart__counter1').on('click', function (e) {
+    cartCounter =  $('.coupons-cart__counter1').index(this)
+    cartCounterText = $('.coupons-cart__counter-text').eq(cartCounter).text()
+    $('.coupons-cart__counter-text').eq(cartCounter).text(parseInt(cartCounterText) + 1)
+  });
+  $('.coupons-cart__counter2').on('click', function (e) {
+    cartCounter =  $('.coupons-cart__counter2').index(this)
+    cartCounterText = $('.coupons-cart__counter-text').eq(cartCounter).text()
+    if (parseInt(cartCounterText) >0){
+      $('.coupons-cart__counter-text').eq(cartCounter).text(parseInt(cartCounterText) - 1)
+    }
+  });
 
 //\\menu
 });
