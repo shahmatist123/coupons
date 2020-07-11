@@ -1124,6 +1124,10 @@ body .box-size .big-coupons .h-auto {
         border: 1px solid #00b153;
         color: #fff;
         background: #00b153;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        outline: none;
       }
       .coupons-cart__btn-text{
         font-weight: bold;
