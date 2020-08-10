@@ -440,10 +440,10 @@ body .box-size .big-coupons .h-auto {
         background: #00b153;
         border-radius: 6px;
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
-        position: absolute;
+        position: fixed;
         z-index: 1000;
-        right: 40px;
-        top: 20px;
+        right: 86px;
+        top: 304px;
         margin-top: 0;
         padding: 6px 19px 8px 20px;
 
@@ -1283,7 +1283,8 @@ body .box-size .big-coupons .h-auto {
 
   @media screen and (max-width: 767px) {
     .coupons-cart {
-
+      top: 147px;
+      right: 68px;
       .coupons-cart__btn {
         margin-top: 70px;
         .d-flex{
@@ -1477,7 +1478,7 @@ body .box-size .big-coupons .h-auto {
       font-size: 14px;
     }
     nav .coupons .cart {
-      top: 15px;
+      top:275px;
       right: 10px;
       padding: 10px;
     }
