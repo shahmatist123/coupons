@@ -72,17 +72,23 @@ $(document).ready(function () {
 
   });
   $('.coupons-cart__counter1').on('click', function (e) {
-    cartCounter =  $('.coupons-cart__counter1').index(this)
+    cartCounter = $('.coupons-cart__counter1').index(this)
     cartCounterText = $('.coupons-cart__counter-text').eq(cartCounter).text()
     $('.coupons-cart__counter-text').eq(cartCounter).text(parseInt(cartCounterText) + 1)
   });
   $('.coupons-cart__counter2').on('click', function (e) {
-    cartCounter =  $('.coupons-cart__counter2').index(this)
+    cartCounter = $('.coupons-cart__counter2').index(this)
     cartCounterText = $('.coupons-cart__counter-text').eq(cartCounter).text()
-    if (parseInt(cartCounterText) >0){
+    if (parseInt(cartCounterText) > 0) {
       $('.coupons-cart__counter-text').eq(cartCounter).text(parseInt(cartCounterText) - 1)
     }
   });
 
 //\\menu
 });
+var elements = document.getElementsByClassName("delivery__mask2");
+for (var i = 0; i < elements.length; i++) {
+  new IMask(elements[i], {
+    mask: '(000) 000-00-00',
+  });
+}
