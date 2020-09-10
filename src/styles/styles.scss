@@ -12,7 +12,22 @@ body .box-size .big-coupons .h-auto {
 .box-size {
   background: #eceef2;
   padding: 0 0 166px 0;
-
+  position: relative;
+  span,p,h1,h2,h3,h4,h5,h6{
+    cursor: default;
+  }
+  .space_slickbox{
+    margin: 0 0 0 10px;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    background: #eceef2;
+  }
   .important-menu::-webkit-scrollbar {
     width: 0;
   }
@@ -415,7 +430,7 @@ body .box-size .big-coupons .h-auto {
 
       .coupons__item {
         width: 260px;
-        padding-bottom: 40px;
+        margin-bottom: 40px;
 
         img {
           width: 30px;
@@ -441,7 +456,7 @@ body .box-size .big-coupons .h-auto {
         border-radius: 6px;
         box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
         position: fixed;
-        z-index: 1000;
+        z-index: 9;
         right: 86px;
         top: 304px;
         margin-top: 0;
@@ -481,6 +496,7 @@ body .box-size .big-coupons .h-auto {
           left: calc(50% - 20px);
           bottom: 0;
           transform: translate(-50%, 50%);
+          white-space: nowrap;
         }
       }
     }
@@ -655,11 +671,14 @@ body .box-size .big-coupons .h-auto {
 
       .small-coupons__text2 {
         font-size: 16px;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        display: block;
+        strong{
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
 
       .small-coupons__price2 {
@@ -1355,7 +1374,7 @@ body .box-size .big-coupons .h-auto {
 
       .coupons {
         .coupons__item {
-          padding-bottom: 20px;
+          margin-bottom: 20px;
         }
       }
 
@@ -1813,5 +1832,10 @@ body .box-size .big-coupons .h-auto {
 
   [hidden] {
     display: none;
+  }
+}
+@media screen and (max-width: 350px){
+  .space_slickbox, .space_owlbox{
+    overflow: hidden;
   }
 }
