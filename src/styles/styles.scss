@@ -8,13 +8,20 @@
 body .box-size .big-coupons .h-auto {
   height: auto !important;
 }
-
+.navigation_banner > div{
+  cursor: default !important;
+}
 .box-size {
   background: #eceef2;
   padding: 0 0 166px 0;
   position: relative;
   span,p,h1,h2,h3,h4,h5,h6{
     cursor: default;
+  }
+  a{
+    span,p,h1,h2,h3,h4,h5,h6{
+      cursor: pointer;
+    }
   }
   .space_slickbox{
     margin: 0 0 0 10px;
@@ -514,7 +521,7 @@ body .box-size .big-coupons .h-auto {
       height: 100%;
       margin-top: 20px;
 
-      & > a {
+      a {
         display: block;
       }
 
